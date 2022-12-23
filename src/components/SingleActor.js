@@ -1,8 +1,8 @@
-const ActorList = ({ actors, title}) => {
+const SingleActor = ({ singleactor, title}) => {
     return (
         <div>
             <h2>{title}</h2>
-            {actors.map((actor) => (
+            {singleactor.map((actor) => (
                 <div key={actor.id}>
                     <h2>{actor.actor_ID}</h2>
                     <h2>{actor.firstname}</h2>
@@ -14,4 +14,4 @@ const ActorList = ({ actors, title}) => {
     )
 }
 
-export default ActorList
+export default SingleActor

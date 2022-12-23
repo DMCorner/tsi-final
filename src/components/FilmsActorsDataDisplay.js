@@ -10,7 +10,7 @@ function FilmsActorsDataDisplay() {
     const [searchfilmsactors2,setSearchfilmsactors2] = useState("");
 
     useEffect(() => {
-    fetch('http://localhost:8080/home/getallfilms&actors')
+    fetch('http://ec2-3-10-148-182.eu-west-2.compute.amazonaws.com:5000/home/getallfilms&actors')
     .then(res => {return res.json();})
     .then(filmactordata => {
         console.log(filmactordata)

@@ -8,8 +8,10 @@ function DataDisplay() {
     const [filmsactors, setFilmsActors] = useState(null);
     const [singlefilmsactors, setSinglefilmsactors] = useState(null);
 
+// ec2-3-10-148-182.eu-west-2.compute.amazonaws.com
+
     useEffect(() => {
-    fetch('http://localhost:8080/home/getallfilms&actors')
+    fetch('http://ec2-3-10-148-182.eu-west-2.compute.amazonaws.com:5000/home/getallfilms&actors')
     .then(res => {return res.json();})
     .then(filmactordata => {
         console.log(filmactordata)
@@ -17,7 +19,7 @@ function DataDisplay() {
     })},[]);
 
     useEffect(() => {
-    fetch('http://localhost:8080/home/getallfilms&actors/1')
+    fetch('http://ec2-3-10-148-182.eu-west-2.compute.amazonaws.com:5000/home/getallfilms&actors/1')
     .then(res => {return res.json();})
     .then(filmactordata => {
         console.log(filmactordata)
@@ -36,7 +38,8 @@ function DataDisplay() {
       {filmsactors[1].title}
       {filmsactors[1].film_id} */}
       {/* {singlefilmsactors} */}
-      {/* <FilmsAndActorsList filmsactors={filmsactors} title="All FilmsActors!" /> */}
+      {/* 
+       */}
       {/* <SingleFA/> */}
       </div>}
     </div>

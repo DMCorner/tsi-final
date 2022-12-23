@@ -11,18 +11,12 @@ const NewEntryForm = ({ addEntry }) => {
         console.log("image: "+ image)
         console.log("description: " + description)
         e.preventDefault();
-        // i.preventDefault();
-        // o.preventDefault();
-        // if (title = "hello" ) {
-        //     alert("Hello Back")
-        // } else {
         addEntry(title,image,description);
         console.log("image 2: "+ image);
         setTitle('');
         setImage('');
         setDescription('');
         console.log("clickend");
-        // }
     }
     return (
         <form id="input_form" className='the_form' onSubmit={handleSubmit} data-testid="todo-1">

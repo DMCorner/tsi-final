@@ -11,7 +11,7 @@ function ActorDataDisplay() {
     
 
     useEffect(() => {
-    fetch('http://localhost:8080/home/getallactors')
+    fetch('http://ec2-3-10-148-182.eu-west-2.compute.amazonaws.com:5000/home/getallactors')
     .then(res => {return res.json();})
     .then(actordata => {
         console.log(actordata)

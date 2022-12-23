@@ -1,11 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import NewEntryForm from './NewEntryForm'
 import EntryList from './EntryList'
 import DataFetching from './components/DataFetching';
 import axios from 'axios';
+import DataDisplay from './components/DataDisplay';
+import ActorDataDisplay from './components/ActorDataDisplay';
+import FilmsActorsDataDisplay from './components/FilmsActorsDataDisplay';
+
 
   let newTitle = "placeholder"
   let newImage = "tinyurl.com/57ynrjuj"
@@ -165,13 +169,34 @@ const Entryform = () => {
 
 
 
-class Messingabout extends React.Component {
+
+class DanDB extends React.Component {
+
   render() {
     return (
-      <div className='the_form'>Hello</div>
-    );
+      <div >
+        <div className='top_banner'><h2>DanDB</h2></div>
+        <div class="grid-container">
+          <div class="grid-item">Actor</div>
+          {/* <div class="grid-item">Film</div>
+          <div class="grid-item">Category</div> */}
+          <div class="grid-item">FilmsActors</div>
+          <div class="grid-item">Search</div>
+          {/* <div class="grid-item">Film</div>
+          <div class="grid-item">Category</div> */}
+          <div class="grid-item">FilmsActors</div>
+          <div class="grid-item"><ActorDataDisplay/></div>
+          {/* <div class="grid-item">Film</div>
+          <div class="grid-item">Category</div> */}
+          <div class="grid-item"><FilmsActorsDataDisplay/></div>
+        </div>
+      </div>
+    )
   }
 }
+
+
+
 
 class Tierlist extends React.Component {
 
@@ -223,8 +248,9 @@ class Totaltierlist extends React.Component {
           {/* <EntryList /> */}
           {/* <Entryform /> */}
           {/* <Messingabout/> */}
-          {/* <Data/> */}
-          {/* <Tierlist /> */}
+          <DanDB/>
+          <Tierlist />
+          {/* <DataDisplay/> */}
           <DataFetching/>
         </div>
       </div>
